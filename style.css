@@ -1,77 +1,371 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Quicksand', sans-serif;
 }
 
-html, body{
-    height: 100%;
+html,body{
+	height: 100%;
 }
 
 .container{
-    max-width: 1280px;
-    margin: 0 auto;
+	max-width: 1280px;
+	margin:0 auto;
 }
 
-#home{
-    width: 100%;
-    height: 95vh;
-    min-height: 800px;
-    padding: 40px 2%;
-    background-image: url('img/bg.png') no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 
-header .menu{
-    width: 100%;
-    height: 100px;
-    background: rgba(255,255,255,0.9);
-    box-shadow: #192123 0 2px 15px 0;
-    border-radius: 0 0 35px 35px;
-    position: relative;
-    top: -40px;
-    display: flex;
-    justify-content: space-around;
+header{
+	width: 100%;
+	height: 95vh;
+	min-height: 800px;
+	padding:40px 2%;
+	/*max-height: 700px;*/
+	background-size: cover;
+	background-position: center;
+	background-image: url('../image/bg.png');
+	font-weight: 300;
 }
 
 header nav{
-    display: flex;
-    justify-content: end;
+	display: flex;
+	justify-content: end;
+}
+nav.mobile-menu{
+	display: none;
+}
+nav.mobile-menu ion-icon{
+	cursor: pointer;
+	display: none;
+	color: #48186D;
+	font-size: 2.5rem;
+	position: absolute;
+	top: 0;
+	right: 40px;
+}
+
+nav.mobile-menu:hover ul{
+	position: absolute;
+	z-index: 2;
+	opacity: 1;
+}
+
+nav.mobile-menu ul{
+	opacity: 0;
+	transition: 1s;
+	background-color: #48186D;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 175px;
+	list-style-type: none;
+	text-align: center;
+}
+
+nav.mobile-menu ul li{
+	padding:8px 0;
+	transition: 0.4s;
+}
+
+nav.mobile-menu ul li:hover{
+	background-color: #DC3DAA;
+}
+
+nav.mobile-menu ul li a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+header .menu{
+	width: 100%;
+	height: 100px;
+	background: rgba(255, 255, 255, 0.9);
+	box-shadow: #192123 0 2px 15px 0;
+	border-radius: 0 0 35px 35px ;
+	position: relative;
+	top: -40px;
+	display: flex;
+	justify-content: space-around;
 }
 
 header .logo{
-    width: 200px;
-    height: 100px;
-    background-color: url('img/logo.png');
-    background-size: contain;
-    background-position: center;
-    position: relative;
-    top: 0;
+	position: relative;
+	top:0;
+	width: 200px;
+	height: 100px;
+	background: url('../image/logo.png') no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
-header nav .desktop-menu ul{
-    list-style-type: none;
+header nav.desktop-menu ul{
+	list-style-type: none;
+	display: flex;
+}
+
+header nav.desktop-menu li{
+	padding:0 20px;
+}
+
+header nav.desktop-menu li a{
+	font-weight: 600;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #48186D;
+	line-height: 100px;
+	transition: 0.5s;
+}
+
+header nav.desktop-menu li a:hover{
+	color: #DC3DAA;
+}
+
+/*--------------------contact------------------container-------------------------------------------------------------------------------------------------------*/
+header .contact{
+    width: 100%;
+    height: 60px;
+    background: #632296;
+    border-radius: 35px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: -30px;
 }
 
-header nav .desktop-menu ul li{
-    padding: 0 20px;
+header .contact .box{
+    width: 33.3%;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
 }
 
-header nav .desktop-menu ul li a{
-    line-height: 100px;
-    font-weight: 700;
-    text-decoration: none;
+header .contact .box:nth-last-child(2){
+	background: #48186D;
+}
+
+header .contact .box h1{
+    font-size: 1.3rem;
+}
+
+header .container{
+    display: flex;
+    justify-content: end;
+    margin-top: 200px;
+}
+
+header .chamada1{
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+header .chamada1 h3{
+    font-weight: 900;
+    font-size: 4rem;
+    color: #fff;
     text-transform: uppercase;
-    color: #48186d;
-    transition: 0.5s;
 }
 
-header nav .desktop-menu ul li a:hover{
-    color: #dc3daa;
+header .chamada1 p{
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
 
+header .chamada1 button{
+    padding: 10px 20px;
+    background: #48186D;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+header .chamada1 button:hover{
+    background: #DC3DAA;
+}
+
+/*------------------------------------------service-----------------------------------------------------------------------------------------------------------------*/
+
+#service{
+	width: 100%;
+	height: 100vh;
+	background: url('../image/bg2.png') no-repeat;
+}
+#service .container .title{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#service .container .title h1{
+	font-size: 2.5rem;
+	margin-top: 30px;
+}
+
+#service .container .title p{
+	font-size: 1.1rem;
+	letter-spacing: 5px;
+}
+
+#service .container .text{
+	max-width: 600px;
+	width: 100%;
+	margin-top: 10vh;
+}
+
+#service .container .text h1{
+	color: #632296;
+	font-size: 2.5rem;
+}
+
+#service .container .text p{
+	margin-top: 20px;
+	font-size: 1.2rem;
+}
+
+#service .container .call{
+	width: 100%;
+	height: 345px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#service .container .call .box{
+	width: 25%;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: 0.9s all;
+}
+#service .container .call .box:hover{
+	transform: scale(1.1);
+}
+
+#service .container .call .box img{
+	width: 150px;
+	position: relative;
+	top: -25px;
+}
+
+#service .container .call .box h2{
+	color: #632296;
+}
+
+#service .container .call .box button{
+	padding: 5px 25px;
+	margin-top: 10px;
+	border: none;
+	background: #AB2FB7;
+	color: #fff;
+	font-size: 1rem;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: 0.3s all;
+}
+
+#service .container .call .box button:hover{
+	background: #DC3DAA;
+}
+
+
+/*--------------------about-----------------------------------------------------------------------------------------*/
+
+#about{
+    width: 100%;
+    height: 100vh;
+    background-image: url('image/bg3.png') no-repeat;
+}
+
+#about .container .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #8c52ff;
+    height: 120px;
+    color: #fff;
+}
+
+#about .container .title h1{
+    font-size: 2.5rem;
+}
+
+#about .container .title p{
+    font-size: 1.1rem;
+    letter-spacing: 5px;
+}
+
+#about .container .content{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+}
+#about .container .content .left{
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 180px;
+}
+
+#about .container .content .left p{
+    font-size: 1.3rem;
+    width: 90%;
+}
+#about .container .content .right{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about .container .content .right .box{
+    width: 70%;
+    height: 360px;
+    background: #3b3a3abc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.9s all;
+}
+
+#about .container .content .right .box:hover{
+    transform: scale(1.1);
+}
+#about .container .right .box img{
+    width: 350px;
+    position: relative;
+    top: -60px;
+}
+#about .container .right .box h1{
+    position: relative;
+    top: -50px;
+    color: #fff;
+}
+
+#about .container .right .box p{
+    position: relative;
+    color: #fff;
+    padding: 10px;
+    top: -40px;
 }
