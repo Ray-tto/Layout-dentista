@@ -1,200 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Poppins', sans-serif;
-list-style: none;
-text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
-:root{
-    --red:#d63a25;
-    --white: #fff;
-    --dark: #1e1c2a;
+html, body{
+    height: 100%;
 }
 
-body{
-    color: var(--dark);
-    background: var(--white);
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.navigation{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 40px;
-    box-shadow: 0 0.1rem 0.5rem #ccc;
+#home{
     width: 100%;
-    background: var(--white);
-    transition: all 0.5s;
-    position: fixed;
+    height: 95vh;
+    min-height: 800px;
+    padding: 40px 2%;
+    background-image: url('img/bg.png') no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.navigation .logo{
-    color: var(--red);
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-.logo span{
-    color: var(--dark);
-}
-
-.navigation ul {
-    display: flex;
-    align-items: center;
-    gap: 5rem;
-}
-
-.navigation ul li a{
-    color: var(--dark);
-    font-size: 17px;
-    font-weight: 500;
-    transition: all 0.5s;
-}
-
-.navigation ul li a:hover{
-    color: var(--red);
-}
-
-.navigation i{
-    cursor: pointer;
-    font-size: 1.5rem;
-}
-
-.menu{
-    cursor: pointer;
-    display: none;
-}
-
-.menu .bar{
-    display: block;
-    width: 28px;
-    height: 3px;
-    border-radius: 3px;
-    background: var(--dark);
-    margin: 5px auto;
-    transition: all 0.3;
-}
-
-/*-----------------------------------------------------*/
-
-.home{
+header .menu{
     width: 100%;
-    height: 100vh;
+    height: 100px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: #192123 0 2px 15px 0;
+    border-radius: 0 0 35px 35px;
+    position: relative;
+    top: -40px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 10%;
+    justify-content: space-around;
 }
 
-.home-text{
-    max-width: 37rem;
+header nav{
+    display: flex;
+    justify-content: end;
 }
 
-.home-text h4{
-    font-size: 1.5rem;
-    color: var(--red);
-    margin-bottom: 1rem;
+header .logo{
+    width: 200px;
+    height: 100px;
+    background-color: url('img/logo.png');
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    top: 0;
 }
 
-.home-text h1{
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    line-height: 4rem;
+header nav .desktop-menu ul{
+    list-style-type: none;
+    display: flex;
 }
 
-.home-text p{
-    margin-bottom: 4rem;
+header nav .desktop-menu ul li{
+    padding: 0 20px;
 }
 
-.botao{
-    padding: 15px 45px;
-    background: var(--red);
-    color: var(--white);
-    border-radius: 10px;
+header nav .desktop-menu ul li a{
+    line-height: 100px;
     font-weight: 700;
-    transition: all 0.5s;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #48186d;
+    transition: 0.5s;
 }
 
-.botao:hover{
-    background: #fc4c35;
-}
+header nav .desktop-menu ul li a:hover{
+    color: #dc3daa;
 
-.home-img img{
-    width: 100%;
-   margin: 50px;
-}
-
-/*-----------------------------------------------*/
-
-@media (max-width: 785px){
-    .navigation{
-        padding: 18px 20px;
-    }
-
-    .menu{
-        display: block;
-    }
-
-    .menu.ativo .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .menu.ativo .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .menu.ativo .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu{
-        position: fixed;
-        right: -100%;
-        top: 70px;
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        background: var(--white);
-        gap: -10px;
-        transition: 0.3s;
-    }
-
-    .nav-menu.ativo{
-        right: 0;
-    }
-
-    .nav-item{
-        margin: 16px 0;
-    }
-
-    /*main*/
-
-    .home{
-        padding: 100px 2%;
-        flex-direction: column;
-        text-align: center;
-        overflow: hidden;
-        gap: 5rem;
-    }
-
-    .home h4{
-        font-size: 15px;
-    }
-
-    .home h1{
-        font-size: 2.5rem;
-        line-height: 3rem;
-    }
-
-    .home p{
-        font-size: 15px;
-    }
-
-    .home img{
-        width: 125%;
-    }
 }
