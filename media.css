@@ -22,6 +22,11 @@
         max-width: none;
         text-align: center;
     }
+
+    #about{
+        height: 110vh;
+        background-image: url('image/bg3.png') no-repeat;
+    }
     #about .container .content{
       flex-direction: column;
     }
@@ -38,18 +43,21 @@
         margin-bottom: 10px;
     }
     #about .container .content .right .box{
-        height: 300px;
+        height: 250px;
+        width: 90%;
     }
     #about .container .right .box img{
         width: 300px;
-        top: -80px;
+        top: -50px;
     }
     #about .container .right .box h1{
       font-size: 1.4rem;
+      top: -40px;
     }
     
     #about .container .right .box p{
         font-size: 1.1rem;
+        top: -30px;
     }
     #contact .container .content{
         flex-direction: column;
@@ -64,7 +72,6 @@
     }
     #contact .container .content .left form h2{
         margin-top: 15px;
-        margin-bottom: 5px;
         font-size: 1.2rem;
     }
 
@@ -72,20 +79,40 @@
         margin-bottom: 15px;
     }
 
+    #contact .container .content .left form input[type=text],
+    #contact .container .content .left form input[type=email], 
+    #contact .container .content .left form input[type=date] {
+        margin-top: 20px;
+    }
+
     #contact .container .content .right{
         height: 5vh;
         position: relative;
         top: -100px;
+        margin-bottom: 10px;
     }
     
     #contact .container .content .right h1{
         font-size: 2rem;
-        margin-top: 30px;
+        margin-top: 40px;
     }
     
     #contact .container .content .right h2{
         font-size: 1rem;
-        margin-top: 20px;
+        margin-top: 8px;
+    }
+
+    footer .container .box p{
+        font-size: .7rem;
+        line-height: 20px;
+    }
+
+    footer .container .box img {
+        width: 145px;
+    }
+    footer .container .box ion-icon {
+        padding: 0 10px;
+        font-size: 1.3rem;
     }
 }
 
@@ -99,8 +126,11 @@
 		display: block;
 	}
 
+
 	nav.mobile-menu ion-icon{
 		display: block;
+        margin-top: 20px;
+        margin-right: 25px;
 	}
 
 	header .nav .box h1{
@@ -120,7 +150,7 @@
 	}
 
 	#service .container .text{
-		margin-top: 5vh;
+		margin-top: 9vh;
 	}
 
 	#service .container .text h1{
@@ -133,10 +163,6 @@
 		padding: 0 5px;
 	}
 
-	#service .container .call{
-		flex-direction: column;
-		margin-top: 90px;
-	}
 	
 	#service .container .call .box{
 		width: 65%;
@@ -148,6 +174,10 @@
 		position: relative;
 		top: 5px;
 	}
+
+    #contact{
+        height: 105vh;
+    }
 
 	footer .container{
 		flex-direction: column;
@@ -165,4 +195,32 @@
 		width: 150px;
 	}
 
+    footer .container .box ion-icon {
+        padding: 0 6px;
+    }
+
+}
+
+@media screen and (max-width: 568px){
+
+    #about {
+        height: 125vh;
+    }
+
+    #about .container .content .right .box {
+        height: 280px;
+        margin-top: 30px;
+    }
+
+    #contact {
+        height: 115vh;
+    }
+
+    header .contact .box h1{
+        font-size: .8rem;
+    }
+
+    header .contact .box p{
+        font-size: .6rem;
+    }
 }
