@@ -1,0 +1,168 @@
+@media screen and (max-width: 830px) {
+    header{
+        background: url('image/responsivo\ bg.png') no-repeat;
+        background-position: center;
+    }
+
+    header .container{
+        justify-content: center;
+    }
+
+    header .chamada1 h3{
+        font-size: 3.5rem;
+    }
+    header .chamada1 p{
+        font-size: 1.5rem;
+    }
+    
+    header .chamada1 button{
+        font-size: .9rem;
+    }
+    #service .container .text{
+        max-width: none;
+        text-align: center;
+    }
+    #about .container .content{
+      flex-direction: column;
+    }
+    #about .container .content .left{
+        width: 100%;
+        margin-top: 50px;
+    }
+    #about .container .content .left p{
+        font-size: 1.1rem;
+    }
+    #about .container .content .right{
+        width: 100%;
+        margin-top: 110px;
+        margin-bottom: 10px;
+    }
+    #about .container .content .right .box{
+        height: 300px;
+    }
+    #about .container .right .box img{
+        width: 300px;
+        top: -80px;
+    }
+    #about .container .right .box h1{
+      font-size: 1.4rem;
+    }
+    
+    #about .container .right .box p{
+        font-size: 1.1rem;
+    }
+    #contact .container .content{
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact .container .content .left{
+        width: 80%;
+    }
+    #contact .container .content .left form{
+        width: 100%;
+        height: 48vh
+    }
+    #contact .container .content .left form h2{
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+    }
+
+    #contact .container .content .left form input[type=submit]{
+        margin-bottom: 15px;
+    }
+
+    #contact .container .content .right{
+        height: 5vh;
+        position: relative;
+        top: -100px;
+    }
+    
+    #contact .container .content .right h1{
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+    
+    #contact .container .content .right h2{
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+
+	nav.desktop-menu{
+		display:none;
+	}
+
+	nav.mobile-menu{
+		display: block;
+	}
+
+	nav.mobile-menu ion-icon{
+		display: block;
+	}
+
+	header .nav .box h1{
+		font-size: 1rem;
+	}
+
+	.chamada1 h3{
+		font-size: 2.3rem;
+	}
+
+	.chamada1 p{
+		font-size: 1rem;
+	}
+
+	#service{
+		height: 100vh;
+	}
+
+	#service .container .text{
+		margin-top: 5vh;
+	}
+
+	#service .container .text h1{
+		font-size: 1.9rem;
+	}
+	
+	#service .container .text p{
+		margin-top: 20px;
+		font-size: 1rem;
+		padding: 0 5px;
+	}
+
+	#service .container .call{
+		flex-direction: column;
+		margin-top: 90px;
+	}
+	
+	#service .container .call .box{
+		width: 65%;
+		margin-top: 20px;
+	}
+	
+	#service .container .call .box img{
+		width: 100px;
+		position: relative;
+		top: 5px;
+	}
+
+	footer .container{
+		flex-direction: column;
+		position: relative;
+		top: -60px;
+	}
+
+	footer .container .box{
+		width: 100%;
+		margin-top: 10px;
+		flex-direction: none;
+	}
+
+	footer .container .box img{
+		width: 150px;
+	}
+
+}

@@ -64,7 +64,7 @@ nav.mobile-menu ul{
 }
 
 nav.mobile-menu ul li{
-	padding:8px 0;
+	padding: 8px 0;
 	transition: 0.4s;
 }
 
@@ -73,7 +73,7 @@ nav.mobile-menu ul li:hover{
 }
 
 nav.mobile-menu ul li a{
-	color: white;
+	color: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -150,7 +150,7 @@ header .contact .box:nth-last-child(2){
 }
 
 header .contact .box h1{
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 header .container{
@@ -452,6 +452,7 @@ header .chamada1 button:hover{
 	width: 80%;
 	height: 40px;
 	margin-top: 20px;
+	margin-bottom: 10px;
 	background: #48186D;
 	border-radius: 30px;
 	color: #fff;
