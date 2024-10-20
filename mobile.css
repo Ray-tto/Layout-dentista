@@ -1,3 +1,4 @@
+
 @media screen and (max-width: 1000px){
     #service{
         height: 130vh;
@@ -308,7 +309,5 @@
     .esconde{
         display: none;
     }
-
-
 
 }
